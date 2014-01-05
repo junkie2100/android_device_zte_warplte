@@ -1,0 +1,109 @@
+
+# system.prop for surf
+#
+
+wifi.supplicant_scan_interval=90
+wifi.interface=wlan0
+wlan.driver.status=ok
+
+wifi.supplicant_scan_interval=90
+wifi.supplicant_no_update_ctrl=true
+dalvik.vm.dexopt-data-only=1
+com.qc.hardware=true
+
+# RIL properties
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+ro.telephony.ril_class=QualcommUiccRIL
+
+#mtp settings
+persist.sys.usb.config=mtp,adb
+
+ro.nfc.port=I2C
+
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+DEVICE_PROVISIONED=1
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=dyn
+ro.sf.compbypass.enable=1
+dev.pm.dyn_samplingrate=1
+
+# LPA Mode ON
+lpa.decode=false
+lpa.use-stagefright=true
+
+# system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+
+# system props for the data modules
+ro.use_data_netmgrd=true
+
+# system props for time-services
+persist.timed.enable=true
+
+# System props for audio
+persist.audio.fluence.mode=endfire
+persist.audio.vr.enable=false
+persist.audio.handset.mic=digital
+
+# System prop to select audio resampler quality
+af.resampler.quality=255
+
+# system prop for opengles version
+ro.opengles.version=131072
+
+# system prop for Bluetooth
+ro.qualcomm.bluetooth.dun=false
+ro.qualcomm.bluetooth.sap=false
+ro.qualcomm.bluetooth.ftp=true
+ro.bluetooth.hfp.ver=1.6
+ro.qualcomm.bt.hci_transport=smd
+ro.bluetooth.request.master=false
+ro.bluetooth.remote.autoconnect=true
+
+#system prop for switching gps driver to qmi
+persist.gps.qmienabled=true
+
+# System property for cabl
+ro.qualcomm.cabl=2
+
+# System prop for sending transmit power request to RIL during WiFi hotspot on/off
+ro.ril.transmitpower=true
+
+# STOCK_BUILD_PROPERTIES
+#
+ro.build.target_operator=SPRINT
+ro.build.target_country=US
+gsm.sim.operator.iso-country=us
+gsm.operator.iso-country=us
+ro.com.google.clientidbase=android-lge
+ro.com.google.clientidbase.ms=android-sprint-us
+ro.com.google.clientidbase.yt=android-zte
+ro.com.google.clientidbase.am=android-zte
+ro.com.google.clientidbase.gmm=android-zte
+persist.data_netmgrd_mtu=1428
+persist.service.ecc.hiddenmenu=
+ro.com.google.gmsversion=4.0_r7
+ro.setupwizard.mode=DISABLED
+ro.livewallpaper.map=DISABLED
+ro.com.google.apphider=off
+drm.service.enabled=true
+ro.sf.lcd_density=240
+ro.hdmi.enable=false
+dhcp.dlna.using=false
+ro.config.vc_call_vol_steps=8
+ro.config.vc_call_vol_default=6
+ro.cdma.voicemail.number=mine
