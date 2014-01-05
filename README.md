@@ -1,19 +1,4 @@
-**Work in progress for the LG Spirit 4G.
-
-**Thanks to:
-	
-	985 PatKicK for his repo(s) in which this is forked from.
-
-    hroark13 for posting his device tree.
-
-	BobZhome for his time & work on this project.
-
-	Dm47021 for his assistance.
-
-	ikarosdev for his assistance. 
-
-	aboatright3605 for debugging and issue tracking.
-
+**Work in progress for the ZTE Warp 4G.
 
 
 HOW-TO BUILD:
@@ -42,13 +27,13 @@ Now initialized the repository and pull the source (with my repos attached):
 
     $ cd ~/android/system/
     
-    $ repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+    $ repo init -u git://github.com/CyanogenMod/android.git -b jellybean
     
     $ repo sync
 
 Note: Depending on your connection, this might take awhile.
 
-Getting my repos for the LG Motion (l1m)
+Getting my repos for the ZTE Warp 4G (warplte)
 	
 	$ cd ~/android/system/device/
 
@@ -56,7 +41,7 @@ Getting my repos for the LG Motion (l1m)
 
 	$ cd lge
 
-	$ git clone https://github.com/playfulgod/android_device_lge_l1m.git -b jcm-10.1 l1m
+	$ git clone https://github.com/junkie2100/android_device_zte_warplte.git -b master warplte
 
 
 Getting kernel source (OPTIONAL)
@@ -68,11 +53,11 @@ Then cd to the kernel directory (custom kernels unable to be used at this time d
 
 	$ cd ~/android/system/kernel
 
-	$ mkdir lge
+	$ mkdir zte
 
-	$ cd ~/android/system/kernel/lge
+	$ cd ~/android/system/kernel/zte
 
-	$ git clone https://github.com/playfulgod/kernel_lge_l1m.git l1m
+	$ git clone https://github.com/zte8930/android_kernel_zte_msm8930.git nex
 
 Extract necessary binaries and proprietary files 
 ------------------------------------------------
@@ -81,11 +66,11 @@ We will need to reuse some proprietary files from the stock ROM:
 
     $ cd
     
-    $ cd ~/android/system/device/lge/l1m
+    $ cd ~/android/system/device/zte/warplte
     
     $ ./extract-files.sh
 
-or place a copy of a stock ROM zip or previous CM build in device/lge/l1m
+or place a copy of a stock ROM zip or previous CM build in device/zte/warplte
 
 	$ ./unzip-files.sh name-of-zip.zip
 
@@ -105,14 +90,14 @@ Now, we build (system being your work directory):
 
     $ cd ~/android/system
 
-To build for the LG Spirit 4G:
+To build for the ZTE Warp 4G:
     
-    $ . build/envsetup.sh && brunch l1m
+    $ . build/envsetup.sh && brunch warplte
 
 
 Installing CM10
 ---------------
-If the build was successful, you can now take the update zip found in out/target/product/l1m/ and flash using a custom recovery. Make sure to grab the latest Gapps to complete the experience.
+If the build was successful, you can now take the update zip found in out/target/product/warplte/ and flash using a custom recovery. Make sure to grab the latest Gapps to complete the experience.
 
 Note: Currently the produced zip will need to be edited and repack with the stock boot.img or the boot.img removed and the updater-script edited accordingly.
 
